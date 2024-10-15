@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import incrementIcon from '../assets/increment.svg'; // Justera sökvägen till din bild
 import decrementIcon from '../assets/decrement.svg'; // Justera sökvägen till din bild
+import { useNavigate } from 'react-router-dom'; // Ändra importen
 
 function SetTimer() {
   const [minutes, setMinutes] = useState(10);
   const [intervals, setIntervals] = useState(false);
   const [breakTime, setBreakTime] = useState(false);
+  const navigate = useNavigate(); // Skapa en navigate-instans
 
   return (
     <div className='timerpage-container'>
@@ -29,7 +31,7 @@ function SetTimer() {
           5 min break/interval
         </label>
       </div>
-      <button className='start-timer' onClick={() => alert('Timer started!')}>START TIMER</button>
+      <button className='start-timer' onClick={() => navigate('/analog')}>START TIMER</button>
     </div>
   );
 }

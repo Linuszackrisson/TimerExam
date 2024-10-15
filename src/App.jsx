@@ -1,7 +1,8 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom';
-import StartPage from './components/StartPage';
+import StartPage from './components/startpage';
 import SetTimer from './components/SetTimer';
+import AnalogPage from './components/AnalogPage';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<StartPage />} />
         <Route path="/set-timer" element={<SetTimer />} />
+        <Route path="/analog" element={<AnalogPage />} />
       </Routes>
     </div>
   )
