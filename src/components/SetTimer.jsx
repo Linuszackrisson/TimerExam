@@ -10,13 +10,14 @@ function SetTimer() {
   return (
     <div className='timerpage-container'>
       <div>
-        <button onClick={() => setMinutes(minutes > 0 ? minutes - 1 : 0)}>
+        <button className='arrow' onClick={() => setMinutes(minutes > 0 ? minutes - 1 : 0)}>
           <img src={decrementIcon} alt="Decrease" />
         </button>
         <span className='minutes'>{minutes}</span>
-        <button onClick={() => setMinutes(minutes < 60 ? minutes + 1 : 60)}>
+        <button className='arrow' onClick={() => setMinutes(minutes < 60 ? minutes + 1 : 60)}>
           <img src={incrementIcon} alt="Increase" />
         </button>
+        <p className='minutes-text'>minutes</p>
       </div>
       <div className='checkbox-container'>
         <label>
@@ -28,7 +29,7 @@ function SetTimer() {
           5 min break/interval
         </label>
       </div>
-      <button onClick={() => alert('Timer started!')}>START TIMER</button>
+      <button className='start-timer' onClick={() => alert('Timer started!')}>START TIMER</button>
     </div>
   );
 }

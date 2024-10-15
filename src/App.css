@@ -43,10 +43,11 @@ body {
   width: 100vw;
   font-family: PT Sans;
 }
-
+.arrow {
+  border: none;
+}
 .timerpage-container button {
   background: none;
-  border: none;
   cursor: pointer;
 }
 
@@ -55,7 +56,19 @@ body {
   font-weight: 700;
   padding: 2rem;
 }
+.minutes-text {
+  font-family: PT Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.7px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #22222299;
+  margin-top: -1rem;
 
+
+
+}
 .checkbox-container {
   display: flex;
   flex-direction: column;
@@ -64,20 +77,41 @@ body {
   margin-top: 2rem;
 }
 
+.checkbox-container label {
+  display: flex;
+  align-items: center; 
+}
+
 .custom-checkbox {
   appearance: none;
   width: 20px;
   height: 20px;
+  background-color: black;
   border: 2px solid black;
   border-radius: 3px;
-  
+  position: relative; 
+  margin-right: 10px; 
   cursor: pointer;
 }
 
 .custom-checkbox:checked::after {
-  content: 'X';
+  content: 'X'; 
   position: absolute;
-  background-color: black;
-  color: black;
+  left: 1px; 
+  top: -2px; 
+  color: white;
   font-size: 20px;
+  font-weight: 700;
+}
+
+.start-timer {
+  font-family: PT Sans;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 31.06px;
+  letter-spacing: 0.1em;
+  border-radius: 5px;
+  padding: 0.5rem;
+  width: 35%;
+  margin-top: 2rem;
 }
