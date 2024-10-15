@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=PT+Sans:wght@400;700&display=swap');
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* ALLT I SAMMA CSS FÖR JAG ÄR LAT OCH DET ÄR LÄTTARE */ 
+/* STARTSIDA STYLING*/ 
+.start-container {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  border: none;
+  
+}
+
+
+
+.start-container p {
+  font-family: PT Sans;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  
+}
+
+/* TIMER PAGE STYLING BANANAZ */ 
+
+.timerpage-container {
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: PT Sans;
+}
+
+.timerpage-container button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.timerpage-container .minutes {
+  font-size: 80px;
+  font-weight: 700;
+  padding: 2rem;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-right: 5rem;
+  margin-top: 2rem;
+}
+
+.custom-checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 3px;
+  
+  cursor: pointer;
+}
+
+.custom-checkbox:checked::after {
+  content: 'X';
+  position: absolute;
+  background-color: black;
+  color: black;
+  font-size: 20px;
+}
