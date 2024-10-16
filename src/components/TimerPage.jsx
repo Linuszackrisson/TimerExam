@@ -1,27 +1,27 @@
-import React, { useState, useEffect } from 'react'; // Importera useState och useEffect
+import React, { useState, useEffect } from 'react'; 
 import { useLocation, useNavigate } from 'react-router-dom';
 import AnalogPage from './AnalogPage';
 import DigitalPage from './DigitalPage';
-import TextPage from './TextPage'; // Importera TextPage
+import TextPage from './TextPage'; 
 
 function TimerPage() {
   const location = useLocation();
   const navigate = useNavigate();
   const { minutes } = location.state || {}; 
-  const totalSeconds = minutes * 60; // Beräkna totala sekunder
+  const totalSeconds = minutes * 60; 
 
-  const [secondsRemaining, setSecondsRemaining] = useState(totalSeconds); // Hantera sekunder kvar
-  const [view, setView] = useState('analog'); // Standard är analog
+  const [secondsRemaining, setSecondsRemaining] = useState(totalSeconds); 
+  const [view, setView] = useState('analog'); 
 
   useEffect(() => {
     if (secondsRemaining > 0) {
       const timerId = setInterval(() => {
-        setSecondsRemaining(prev => prev - 1); // Minska sekunder kvar
+        setSecondsRemaining(prev => prev - 1); 
       }, 1000);
 
-      return () => clearInterval(timerId); // Rensa intervall när komponenten unmountas
+      return () => clearInterval(timerId); 
     } else {
-      navigate('/end'); // Navigera till 'end' när tiden är slut
+      navigate('/end'); 
     }
   }, [secondsRemaining, navigate]);
 
@@ -35,20 +35,20 @@ function TimerPage() {
     }
   };
 
-  const abortTimer = () => navigate('/set-timer'); // Navigera tillbaka till timerinställning
+  const abortTimer = () => navigate('/set-timer'); 
 
   return (
     <div className='timerpage'>
       <h1 className='LOGO'>Interval</h1>
       
-      {view === 'analog' && <AnalogPage secondsRemaining={secondsRemaining} />} {/* Rendera AnalogPage */}
-      {view === 'digital' && <DigitalPage totalSeconds={secondsRemaining} />} {/* Rendera DigitalPage */}
-      {view === 'text' && <TextPage totalSeconds={secondsRemaining} />} {/* Rendera TextPage */}
+      {view === 'analog' && <AnalogPage secondsRemaining={secondsRemaining} />} 
+      {view === 'digital' && <DigitalPage secondsRemaining={secondsRemaining} />} 
+      {view === 'text' && <TextPage secondsRemaining={secondsRemaining} />} 
       
       <button onClick={toggleView}>
         {view === 'analog' ? 'Switch to Digital' : view === 'digital' ? 'Switch to Text' : 'Switch to Analog'}
       </button>
-      <button onClick={abortTimer}>ABORT TIMER</button> {/* Abortknapp */}
+      <button onClick={abortTimer}>ABORT TIMER</button> 
     </div>
   );
 }

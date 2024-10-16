@@ -19,16 +19,16 @@ const numberToText = (num) => {
   return ''; // Hantera numret om det är 60 eller mer (kan justeras om nödvändigt)
 };
 
-function TextPage({ totalSeconds }) {
-  const minutes = Math.floor(totalSeconds / 60);
-  const seconds = totalSeconds % 60;
+function TextPage({ secondsRemaining }) {
+  const minutes = Math.floor(secondsRemaining / 60);
+  const seconds = secondsRemaining % 60;
 
   // Bygg textrepresentationen
   const minuteText = numberToText(minutes);
   const secondText = numberToText(seconds);
 
   // Kontrollera om vi ska visa sekunder eller minuter
-  if (totalSeconds < 60) {
+  if (secondsRemaining < 60) {
     return (
       <div className='text-page'>
         <h2>{`${secondText} sekund${seconds !== 1 ? 'er' : ''}`}</h2> {/* Singular/plural för sekunder */}
