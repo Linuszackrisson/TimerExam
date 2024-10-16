@@ -11,7 +11,7 @@ function SetTimer() {
 
   const handleStartTimer = () => {
     // Navigera till '/analog' och skicka med minutvärdet som state
-    navigate('/analog', { state: { minutes } });
+    navigate('/timerpage', { state: { minutes } });
   };
 
   return (

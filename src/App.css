@@ -32,7 +32,7 @@ body {
 
 /* TIMER PAGE STYLING BANANAZ */ 
 
-.timerpage-container {
+.timerpage-container  {
   background-color: white;
   color: black;
   display: flex;
@@ -116,7 +116,7 @@ body {
   margin-top: 2rem;
 }
 
-.clock-page {
+.timerpage {
   background-color: white;
   color: black;
   display: flex;
@@ -128,7 +128,7 @@ body {
   font-family: PT Sans;
   
 }
-.clock-page h1 {
+.timerpage h1 {
   font-family: PT Sans;
   font-size: 20px;
   font-weight: 400;
@@ -137,7 +137,7 @@ body {
   text-align: center;
 
 }
-.clock-page button {
+.timerpage button {
   margin-bottom: 3rem;
   border: 1px solid #22222299;
   background-color: white;
@@ -157,7 +157,7 @@ body {
 }
 
 .clock-container img {
-  width: 250px;
+  width: 220px;
   
 }
 
