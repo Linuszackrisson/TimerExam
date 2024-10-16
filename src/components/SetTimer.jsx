@@ -5,13 +5,12 @@ import { useNavigate } from 'react-router-dom';
 
 function SetTimer() {
   const [minutes, setMinutes] = useState(10);
-  const [intervals, setIntervals] = useState(false);
-  const [breakTime, setBreakTime] = useState(false);
+  const [isInterval, setIsInterval] = useState(false);
+  const [hasBreak, setHasBreak] = useState(false);
   const navigate = useNavigate();
 
   const handleStartTimer = () => {
-    // Navigera till '/analog' och skicka med minutvärdet som state
-    navigate('/timerpage', { state: { minutes } });
+    navigate('/timerpage', { state: { minutes, isInterval, hasBreak } });
   };
 
   return (
@@ -28,11 +27,11 @@ function SetTimer() {
       </div>
       <div className='checkbox-container'>
         <label>
-          <input type="checkbox" checked={intervals} onChange={() => setIntervals(!intervals)} className="custom-checkbox" />
+          <input type="checkbox" checked={isInterval} onChange={() => setIsInterval(!isInterval)} className="custom-checkbox" />
           Intervals
         </label>
         <label>
-          <input type="checkbox" checked={breakTime} onChange={() => setBreakTime(!breakTime)} className="custom-checkbox" />
+          <input type="checkbox" checked={hasBreak} onChange={() => setHasBreak(!hasBreak)} className="custom-checkbox" />
           5 min break/interval
         </label>
       </div>
