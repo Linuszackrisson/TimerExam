@@ -38,7 +38,7 @@ function TextPage({ secondsRemaining }) {
 
   return (
     <div className='text-page'>
-      <h2>{`${minuteText}${minutes !== 0 ? ' minuter' : ''}${minutes > 0 && seconds > 0 ? ' och ' : ''}${secondText} sekund${seconds !== 1 ? 'er' : ''}`}</h2> 
+      <h2 className='textview-text'>{`${minuteText}${minutes !== 0 ? ' minuter' : ''}${minutes > 0 && seconds > 0 ? ' och ' : ''}${secondText} sekund${seconds !== 1 ? 'er' : ''}`}</h2> 
     </div>
   );
 }

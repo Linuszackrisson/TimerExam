@@ -12,7 +12,7 @@ function AnalogPage({ secondsRemaining }) {
         <motion.div 
           className="hand minute-hand" 
           animate={{ rotate: 360 }} 
-          transition={{ duration: secondsRemaining, repeat: Infinity }} // Roterar en gång per minut
+          transition={{ duration: secondsRemaining, repeat: Infinity }} 
         />
         <motion.div 
           className="hand second-hand" 

@@ -7,7 +7,7 @@ function DigitalPage({ secondsRemaining }) {
 
   return (
     <div className='digital-page'>
-      <h2>{`${minutes}:${seconds < 10 ? '0' : ''}${seconds}`}</h2>
+      <h2 className='digital-clock'>{`${minutes}:${seconds < 10 ? '0' : ''}${seconds}`}</h2>
     </div>
   );
 }
