@@ -139,7 +139,7 @@ body {
   text-align: center;
 
 }
-.abort-button .newtime-button {
+.abort-button  {
   margin-bottom: 3rem;
   border: 1px solid #22222299;
   background-color: white;
@@ -155,12 +155,13 @@ body {
 
 }
 .newtime-button {
-  margin-bottom: 3rem;
-  border: 1px solid #22222299;
-  background-color: white;
+  margin-top: auto; /* Flytta knappen till botten av sidan */
+  margin-bottom: 20px; /* Lägger till lite utrymme under knappen */
+  border: 1px solid rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 1);
   font-family: PT Sans;
-  color: #22222299;
-  backround: noone;
+  color: white;
+  background: none;
   font-size: 18px;
   font-weight: 700;
   padding: 7px 8px;
@@ -168,6 +169,7 @@ body {
   letter-spacing: 0.1em;
   text-align: center;
   border-radius: 5px;
+  margin-bottom: 1rem;
 }
 .clock-container {
   position: relative; 
@@ -225,15 +227,18 @@ body {
   background-color: white;
   border: 1px solid #ccc;
   padding: 10px;
+  
+  height: 100;
   border-radius: 5px;
   z-index: 1000;
+  width: 200px; /* Justerad bredd på menyn */
 }
 
 .menu ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  width: 50vh;
+  width: 100%;
   height: 100%;
   
 }
@@ -285,19 +290,27 @@ body {
 .end-page {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between; /* Ändrad för att placera knappen längst ner */
   align-items: center;
-  height: 100vh; /* Gör så att behållaren tar upp hela höjden av fönstret */
-  text-align: center;
-  background: rgba(34, 34, 34, 1);
-  
+  height: 100vh; /* Full höjd */
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1)); /* Fadad bakgrund */
+  color: white; /* Textfärg */
+}
+
+.end-mid {
+  display: flex; /* Gör end-mid till en flex-container */
+  flex-direction: column; /* Ställ in riktningen till kolumn */
+  justify-content: center; /* Centrera innehållet vertikalt */
+  align-items: center; /* Centrera innehållet horisontellt */
+  flex-grow: 1; /* Gör så att denna del växer för att fylla utrymmet */
+  position: relative;
 }
 
 .alarm-icon {
-  margin-top: 20px; /* Lägger till lite utrymme mellan texten och ikonen */
-  color: black;
-  z-index: 1000;
+  width: 100px; /* Justera storlek på ikonen */
+  height: auto;
 }
+
 .times-up {
   font-family: PT Sans;
   font-size: 36px;
@@ -306,5 +319,4 @@ body {
   letter-spacing: 0.1em;
   text-align: center;
   color: white;
-
 }
