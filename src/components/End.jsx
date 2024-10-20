@@ -13,8 +13,9 @@ function End() {
     <div className="end-page">
       <div className="end-mid">
       <img src={alarmIcon} alt="Alarm Icon" className="alarm-icon" /> {/* Visa SVG-ikonen */}
-      <h1 className='times-up'>Times up!</h1>
       </div>
+      <h1 className='times-up'>Times up!</h1>
+      
       <button className='newtime-button' onClick={handleButtonClick}>SET NEW TIMER</button> {/* Ändrad onClick-funktion */}
 
     </div>
