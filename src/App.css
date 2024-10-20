@@ -5,8 +5,7 @@ body {
   padding: 0;
   margin: 0;
 }
-/* ALLT I SAMMA CSS FÖR JAG ÄR LAT OCH DET ÄR LÄTTARE */ 
-/* STARTSIDA STYLING*/ 
+
 .start-container {
   background-color: black;
   color: white;
@@ -17,22 +16,16 @@ body {
   height: 100vh;
   width: 100vw;
   border: none;
-  
 }
-
-
 
 .start-container p {
   font-family: PT Sans;
   font-size: 14px;
   font-weight: 300;
   letter-spacing: 0.1em;
-  
 }
 
-/* TIMER PAGE STYLING BANANAZ */ 
-
-.timerpage-container  {
+.timerpage-container {
   padding-top: 7rem;
   background-color: white;
   color: black;
@@ -44,13 +37,14 @@ body {
   width: 100vw;
   font-family: PT Sans;
 }
+
 .arrow {
   border: none;
 }
+
 .timerpage-container button {
   background: none;
   cursor: pointer;
-  
 }
 
 .timerpage-container .minutes {
@@ -58,6 +52,7 @@ body {
   font-weight: 700;
   padding: 2rem;
 }
+
 .minutes-text {
   font-family: PT Sans;
   font-size: 16px;
@@ -67,16 +62,13 @@ body {
   text-align: center;
   color: #22222299;
   margin-top: -10px;
-
-
-
 }
+
 .checkbox-container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-right: 5rem;
-  margin-top: 6rem;
+  margin: 6rem 5rem 0 0;
 }
 
 .checkbox-container label {
@@ -128,8 +120,8 @@ body {
   height: 100vh;
   width: 100vw;
   font-family: PT Sans;
-  
 }
+
 .timerpage h1 {
   font-family: PT Sans;
   font-size: 20px;
@@ -137,9 +129,9 @@ body {
   line-height: 25.88px;
   letter-spacing: 0.1em;
   text-align: center;
-
 }
-.abort-button  {
+
+.abort-button {
   margin-bottom: 3rem;
   border: 1px solid #22222299;
   background-color: white;
@@ -152,16 +144,15 @@ body {
   letter-spacing: 0.1em;
   text-align: center;
   border-radius: 5px;
-
 }
+
 .newtime-button {
-  margin-top: auto; /* Flytta knappen till botten av sidan */
-  margin-bottom: 20px; /* Lägger till lite utrymme under knappen */
+  margin-bottom: 3rem;
   border: 1px solid rgba(255, 255, 255, 1);
-  background-color: rgba(255, 255, 255, 1);
-  font-family: PT Sans;
-  color: white;
   background: none;
+  font-family: PT Sans;
+  color: rgba(255, 255, 255, 1);
+
   font-size: 18px;
   font-weight: 700;
   padding: 7px 8px;
@@ -169,15 +160,14 @@ body {
   letter-spacing: 0.1em;
   text-align: center;
   border-radius: 5px;
-  margin-bottom: 1rem;
 }
+
 .clock-container {
   position: relative; 
 }
 
 .clock-container img {
   width: 220px;
-  
 }
 
 .hand {
@@ -207,7 +197,6 @@ body {
   line-height: 103.52px;
   letter-spacing: 0.1em;
   text-align: center;
-
 }
 
 .hamburger-menu {
@@ -222,16 +211,14 @@ body {
 
 .menu {
   position: absolute;
-  top: 50px; /* Placera menyn nedanför hamburgermenyn */
+  top: 50px;
   left: 10px;
   background-color: white;
   border: 1px solid #ccc;
   padding: 10px;
-  
-  height: 100;
   border-radius: 5px;
   z-index: 1000;
-  width: 200px; /* Justerad bredd på menyn */
+  width: 200px;
 }
 
 .menu ul {
@@ -239,23 +226,6 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
-  
-}
-
-.menu li {
-  padding: 10px;
-  cursor: pointer;
-}
-
-.menu li:hover {
-  background-color: #f0f0f0;
-}
-
-.menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .menu li {
@@ -267,7 +237,6 @@ body {
   line-height: 31.06px;
   letter-spacing: 0.1em;
   text-align: center;
-
 }
 
 .menu li:hover {
@@ -282,32 +251,30 @@ body {
   letter-spacing: 0.1em;
   text-align: center;
   text-transform: uppercase;
-  padding-left: 1rem;
-  padding-right: 1rem;
-
+  padding: 0 1rem;
 }
 
 .end-page {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Ändrad för att placera knappen längst ner */
+  justify-content: space-between;
   align-items: center;
-  height: 100vh; /* Full höjd */
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1)); /* Fadad bakgrund */
-  color: white; /* Textfärg */
+  height: 100vh;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
+  color: white;
 }
 
 .end-mid {
-  display: flex; /* Gör end-mid till en flex-container */
-  flex-direction: column; /* Ställ in riktningen till kolumn */
-  justify-content: center; /* Centrera innehållet vertikalt */
-  align-items: center; /* Centrera innehållet horisontellt */
-  flex-grow: 1; /* Gör så att denna del växer för att fylla utrymmet */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
   position: relative;
 }
 
 .alarm-icon {
-  width: 100px; /* Justera storlek på ikonen */
+  width: 100px;
   height: auto;
 }
 
