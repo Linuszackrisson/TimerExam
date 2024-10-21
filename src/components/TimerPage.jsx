@@ -9,7 +9,7 @@ function TimerPage() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const { minutes = 25, isInterval = false, hasBreak = false } = location.state || {};
+  const { minutes = 10, isInterval = false, hasBreak = false } = location.state || {};
 
   const workSeconds = minutes * 60;
   const breakSeconds = 5; 
@@ -51,10 +51,9 @@ function TimerPage() {
     return () => clearInterval(timerId);
   }, [workSeconds, breakSeconds, isInterval, hasBreak, isBreak, cycles, navigate]);
 
-  // Funktion för att byta vy och stänga menyn
   const changeView = (newView) => {
     setView(newView);
-    setIsMenuOpen(false); // Stänger menyn efter ett val
+    setIsMenuOpen(false); 
   };
 
   // Funktion för att toggla hamburgermenyn
@@ -70,17 +69,14 @@ function TimerPage() {
     <div className='timerpage'>
       <h1 className='LOGO'>interval</h1>
 
-      {/* Rendera rätt vy beroende på vilken som är vald */}
       {view === 'analog' && <AnalogPage secondsRemaining={secondsRemaining} />}
       {view === 'digital' && <DigitalPage secondsRemaining={secondsRemaining} />}
       {view === 'text' && <TextPage secondsRemaining={secondsRemaining} />}
 
-      {/* Hamburgermeny-knapp med SVG-ikon */}
       <button onClick={toggleMenu} className="hamburger-menu">
-        <img src={navIcon} alt="Menu Icon" /> {/* Använd SVG som bild */}
+        <img src={navIcon} alt="Menu Icon" /> 
       </button>
 
-      {/* Menyalternativ, visas endast när menyn är öppen */}
       {isMenuOpen && (
         <div className="menu">
           <ul>
