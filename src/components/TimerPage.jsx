@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import AnalogPage from './AnalogPage';
 import DigitalPage from './DigitalPage';
 import TextPage from './TextPage';
-import navIcon from '../assets/navicon.svg'; // Importera SVG-filen
+import navIcon from '../assets/navicon.svg'; 
 
 function TimerPage() {
   const location = useLocation();
@@ -18,7 +18,7 @@ function TimerPage() {
   const [view, setView] = useState('digital');
   const [isBreak, setIsBreak] = useState(false);
   const [cycles, setCycles] = useState(0);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Hantera hamburgermeny
+  const [isMenuOpen, setIsMenuOpen] = useState(false); 
 
   useEffect(() => {
     const timerId = setInterval(() => {
@@ -56,7 +56,6 @@ function TimerPage() {
     setIsMenuOpen(false); 
   };
 
-  // Funktion för att toggla hamburgermenyn
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };

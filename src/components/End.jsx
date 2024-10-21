@@ -20,9 +20,6 @@ function End() {
         animate={{ rotate: [0, 10, -10, 0] }} 
         transition={{ duration: 0.5, repeat: Infinity }} 
       /> 
-      {/* Klockan roterar 10 grader åt höger och 10 grader åt vänster, som ger en skakande effekt, animationen
-      tar en halv sekund att genomföra och kommer loopa.*/}
-      
       </div>
       <h1 className='times-up'>Times up!</h1>
 

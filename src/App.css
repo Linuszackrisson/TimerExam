@@ -45,7 +45,7 @@ body {
 .timerpage-container button {
   background: none;
   cursor: pointer;
-  transition: background-color 0.5s ease, transform 0.5s ease; /* Definiera transitioner */
+  transition: background-color 0.5s ease, transform 0.5s ease; 
 }
 
 .timerpage-container button:hover {
@@ -263,7 +263,7 @@ body {
   background-color: #f0f0f0;
 }
 
-.textview-text {
+.textview-text  {
   font-family: PT Sans;
   font-size: 30px;
   font-weight: 700;

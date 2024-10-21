@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Funktion som konverterar siffror till text
 const numberToText = (num) => {
   const ones = [
     '', 'en', 'två', 'tre', 'fyra', 'fem', 'sex', 'sju', 'åtta', 'nio',
@@ -16,22 +15,20 @@ const numberToText = (num) => {
   if (num < 20) return teens[num - 10];
   if (num < 60) return tens[Math.floor(num / 10)] + (num % 10 > 0 ? ones[num % 10] : '');
 
-  return ''; // Hantera numret om det är 60 eller mer (kan justeras om nödvändigt)
+  return ''; 
 };
 
 function TextPage({ secondsRemaining }) {
   const minutes = Math.floor(secondsRemaining / 60);
   const seconds = secondsRemaining % 60;
 
-  // Bygg textrepresentationen
   const minuteText = numberToText(minutes);
   const secondText = numberToText(seconds);
 
-  // Kontrollera om vi ska visa sekunder eller minuter
   if (secondsRemaining < 60) {
     return (
       <div className='text-page'>
-        <h2>{`${secondText} sekund${seconds !== 1 ? 'er' : ''}`}</h2> {/* Singular/plural för sekunder */}
+        <h2>{`${secondText} sekund${seconds !== 1 ? 'er' : ''}`}</h2> 
       </div>
     );
   }
