@@ -12,7 +12,7 @@ function TimerPage() {
   const { minutes = 10, isInterval = false, hasBreak = false } = location.state || {};
 
   const workSeconds = minutes * 60;
-  const breakSeconds = 5; 
+  const breakSeconds = 300; 
 
   const [secondsRemaining, setSecondsRemaining] = useState(workSeconds);
   const [view, setView] = useState('digital');
